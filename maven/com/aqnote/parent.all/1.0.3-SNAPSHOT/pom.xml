@@ -5,7 +5,7 @@
   <groupId>com.aqnote</groupId>
   <artifactId>parent.all</artifactId>
   <packaging>pom</packaging>
-  <version>1.0.1</version>
+  <version>1.0.3-SNAPSHOT</version>
   <name>AQNote App Parent POM</name>
   <description>Auto converted POM for Authentication Application</description>
 
