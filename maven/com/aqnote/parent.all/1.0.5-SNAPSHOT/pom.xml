@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.aqnote</groupId>
+  <artifactId>parent.all</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0.5-SNAPSHOT</version>
+  <name>AQNote App Parent POM</name>
+  <description>Auto converted POM for Authentication Application</description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.test.skip>true</maven.test.skip>
+    <maven.compiler.source>10</maven.compiler.source>
+    <maven.compiler.target>10</maven.compiler.target>
+  </properties>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+      </testResource>
+      <testResource>
+        <directory>src/test/java</directory>
+        <includes>
+          <include>**/*</include>
+        </includes>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </testResource>
+    </testResources>
+
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>10</source>
+          <target>10</target>
+          <verbose>true</verbose>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+  <distributionManagement>
+    <repository>
+      <id>aqnote-release</id>
+      <url>http://aqnote.local:8081/repository/aqnote-release</url>
+    </repository>
+    <snapshotRepository>
+      <id>aqnote-snapshot</id>
+      <url>http://aqnote.local:8081/repository/aqnote-snapshot</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>
